@@ -1,2 +1,2 @@
-source/application/config.php
-source/application/database.php
+./source/application/config.php
+./source/application/database.php
