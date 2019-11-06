@@ -254,14 +254,7 @@ function get_version()
     if ($version) {
         return $version;
     }
-    $file = dirname(ROOT_PATH) . '/version.json';
-    if (!file_exists($file)) {
-        throw new Exception('version.json not found');
-    }
-    $version = json_decode(file_get_contents($file), true);
-    if (!is_array($version)) {
-        throw new Exception('version cannot be decoded');
-    }
+    $version = ['version' => '1.1.18'];
     return $version['version'];
 }
 
